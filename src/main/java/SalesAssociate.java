@@ -1,9 +1,11 @@
-import java.util.ArrayList;
-
 public class SalesAssociate extends Employee {
 
-    protected String employeeName;
     protected SalesManager manager;
+
+    public SalesAssociate(String name, long salesID, SalesManager manager) {
+        super(name, salesID);
+        this.manager = manager;
+    }
 
     double bonus() {
         return this.numberOfClients() * 500;
@@ -15,14 +17,6 @@ public class SalesAssociate extends Employee {
 
     public void setManager(SalesManager manager) {
         this.manager = manager;
-    }
-
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
     }
 }
 

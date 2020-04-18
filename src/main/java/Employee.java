@@ -3,6 +3,12 @@ import java.util.ArrayList;
 public abstract class Employee {
     protected long salesID;
     private ArrayList<Client> _clients;
+    protected String employeeName;
+
+    public Employee(String name, long salesID) {
+        this.employeeName = name;
+        this.salesID = salesID;
+    }
 
     public Boolean addClient(String client) {
         for (int i = 0; i <_clients.size(); i++) {
@@ -29,5 +35,12 @@ public abstract class Employee {
 
     protected int numberOfClients() {
         return this._clients.size();
+    }
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 }

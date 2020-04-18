@@ -2,16 +2,12 @@ import java.util.ArrayList;
 
 public class SalesManager extends Employee {
 
-    protected String employeeName;
+
     private ArrayList<Employee> employees;
     protected SalesManager manager;
 
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public SalesManager(String name, long salesID) {
+        super(name, salesID);
     }
 
     public ArrayList<Employee> getEmployees() {
