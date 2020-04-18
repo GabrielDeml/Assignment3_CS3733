@@ -22,8 +22,8 @@ public class main {
 
         System.out.println("Sales Manager: " + Sam.getEmployeeName() + ". Employees: " + getEmployeesString(Sam) + "Clients: " + getClientsString(Sam));
         System.out.println("Sales Manager: " + Charlie.getEmployeeName() + ". Employees: " + getEmployeesString(Charlie) + "Clients: " + getClientsString(Charlie));
-        System.out.println("Sales Associate: " + Sven.getEmployeeName() + ". Sales Manager: " + Sven.getManager() + ", Clients: " + getClientsString(Sven));
-        System.out.println("Sales Associate: " + Alex.getEmployeeName() + ". Sales Manager: " + Alex.getManager() + ", Clients: " + getClientsString(Alex));
+        System.out.println("Sales Associate: " + Sven.getEmployeeName() + ". Sales Manager: " + Sven.getManager().getEmployeeName() + ". Clients: " + getClientsString(Sven));
+        System.out.println("Sales Associate: " + Alex.getEmployeeName() + ". Sales Manager: " + Alex.getManager().getEmployeeName() + ". Clients: " + getClientsString(Alex));
 
         System.out.println("Client: " + Jo.get_clientName() + ". Sales Employee: " + Jo.get_salesEmployee().getEmployeeName());
         System.out.println("Client: " + Riley.get_clientName() + ". Sales Employee: " + Riley.get_salesEmployee().getEmployeeName());
