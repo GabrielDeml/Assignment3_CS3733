@@ -8,7 +8,9 @@ public class Client {
         this._clientID = clientID;
         this._clientName = clientName;
         this._salesEmployee = salesEmployee;
+        this._salesEmployee.addClient(this);
     }
+
 
     double totalSales() { return -1; }
 

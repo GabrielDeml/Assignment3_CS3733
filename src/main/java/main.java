@@ -10,5 +10,39 @@ public class main {
         Client Avery = new Client(654, "Avery", Charlie);
         Client Taylor = new Client(840, "Taylor", Alex);
         Client Remi = new Client(912, "Remi", Alex);
+
+
+        System.out.println("Sales Manager: " + Sam.getEmployeeName() + ". Employees: " + getEmployeesString(Sam) + "Clients: " + getClientsString(Sam));
+
+        System.out.println("Client: " + Jo.get_clientName() + ". Sales Employee: " + Jo.get_salesEmployee().getEmployeeName());
+        System.out.println("Client: " + Riley.get_clientName() + ". Sales Employee: " + Riley.get_salesEmployee().getEmployeeName());
+        System.out.println("Client: " + Peyton.get_clientName() + ". Sales Employee: " + Peyton.get_salesEmployee().getEmployeeName());
+        System.out.println("Client: " + Avery.get_clientName() + ". Sales Employee: " + Avery.get_salesEmployee().getEmployeeName());
+        System.out.println("Client: " + Taylor.get_clientName() + ". Sales Employee: " + Taylor.get_salesEmployee().getEmployeeName());
+        System.out.println("Client: " + Remi.get_clientName() + ". Sales Employee: " + Remi.get_salesEmployee().getEmployeeName());
+    }
+
+    static private String getEmployeesString(SalesManager salesManager) {
+        StringBuilder associates = new StringBuilder();
+        String prefix = "";
+        for(int i = 0; i < salesManager.getEmployees().size(); i++) {
+            associates.append(prefix);
+            associates.append(salesManager.getEmployees().get(i));
+            prefix = ". ";
+        }
+        return associates.toString();
+    }
+    static private String getClientsString(Employee employee) {
+        StringBuilder associates = new StringBuilder();
+        String prefix = "";
+        for(int i = 0; i < employee.getClients().size(); i++) {
+            associates.append(prefix);
+            associates.append(employee.getClients().get(i).get_clientName());
+            associates.append(" ");
+            associates.append(employee.getClients().get(i).get_clientID());
+            prefix = ", ";
+        }
+        associates.setLength(associates.length() -1);
+        return associates.toString();
     }
 }

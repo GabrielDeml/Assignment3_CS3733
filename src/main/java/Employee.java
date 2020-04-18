@@ -10,18 +10,17 @@ public abstract class Employee {
         this.salesID = salesID;
     }
 
-    public Boolean addClient(String client) {
+    public Boolean addClient(Client client) {
         for (int i = 0; i <_clients.size(); i++) {
-            if (_clients.get(i).get_clientName().equals(client)) {
+            if (_clients.get(i).equals(client)) {
                 return false;
             }
         }
-        int clientCount = Client.get_clientCount();
-        _clients.add(new Client(clientCount+1, "name"+clientCount, this));
+        _clients.add(client);
         return true;
     }
 
-    private ArrayList<Client> getClients() {
+    ArrayList<Client> getClients() {
         return _clients;
     }
 
