@@ -18,12 +18,12 @@ public class SalesManager extends Employee {
         this.employees = employees;
     }
 
-    public SalesManager getManaager() {
-        return manaager;
+    public SalesManager getManager() {
+        return manager;
     }
 
-    public void setManaager(SalesManager manaager) {
-        this.manaager = manaager;
+    public void setManager(SalesManager manager) {
+        this.manager = manager;
     }
 
     public long getSalesID() {
@@ -36,7 +36,7 @@ public class SalesManager extends Employee {
 
     protected String employeeName;
     private ArrayList<Employee> employees;
-    protected SalesManager manaager;
+    protected SalesManager manager;
     protected long salesID;
     double bonus(){return -1.0;}
 }

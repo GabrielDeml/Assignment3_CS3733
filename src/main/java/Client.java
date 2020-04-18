@@ -4,8 +4,19 @@ public class Client {
 
     double totalSales() { return -1; }
 
-    protected int getClientID() { return _clientID; }
+    public int get_clientID() {
+        return _clientID;
+    }
 
-    protected String getClientName() { return _clientName }
+    public void set_clientID(int _clientID) {
+        this._clientID = _clientID;
+    }
 
+    public String get_clientName() {
+        return _clientName;
+    }
+
+    public void set_clientName(String _clientName) {
+        this._clientName = _clientName;
+    }
 }

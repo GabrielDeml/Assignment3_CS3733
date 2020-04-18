@@ -4,19 +4,20 @@ public class SalesAssociate extends Employee{
 
     double bonus() { return -1; }
 
-    protected String getEmployeeName() {
-        return employeeName;
-    }
-
-    protected SalesManager getManager() {
+    public SalesManager getManager() {
         return manager;
     }
 
-    protected void setEmployeeNames(String newEmpName) {
-        employeeName = newEmpName;
+    public void setManager(SalesManager manager) {
+        this.manager = manager;
     }
 
-    protected void setManager(SalesManager newMan) {
-        manager = newMan;
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 }
+
