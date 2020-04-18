@@ -22,8 +22,12 @@ public abstract class Employee {
         return true;
     }
 
-    ArrayList<Client> getClients() {
+    private ArrayList<Client> getClients() {
         return _clients;
+    }
+
+    public ArrayList<Client> getClientsHelper() {
+        return this.getClients();
     }
 
     public long getSalesID() {

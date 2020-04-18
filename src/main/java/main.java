@@ -47,11 +47,11 @@ public class main {
     static private String getClientsString(Employee employee) {
         StringBuilder associates = new StringBuilder();
         String prefix = "";
-        for(int i = 0; i < employee.getClients().size(); i++) {
+        for(int i = 0; i < employee.getClientsHelper().size(); i++) {
             associates.append(prefix);
-            associates.append(employee.getClients().get(i).get_clientName());
+            associates.append(employee.getClientsHelper().get(i).get_clientName());
             associates.append(" ");
-            associates.append(employee.getClients().get(i).get_clientID());
+            associates.append(employee.getClientsHelper().get(i).get_clientID());
             prefix = ", ";
         }
         return associates.toString();
