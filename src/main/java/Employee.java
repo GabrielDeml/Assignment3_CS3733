@@ -1,8 +1,9 @@
-public abstract class Employee<Arraylist> {
+import java.util.ArrayList;
+public abstract class Employee{
     public Boolean addClient(String client) {
         return true;
     }
-    private Arraylist<Client>(){
-
+    private  ArrayList<Client> getClients() {
+        return new ArrayList<Client>();
     }
 }
