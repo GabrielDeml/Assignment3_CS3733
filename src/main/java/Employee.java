@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public abstract class Employee {
     protected long salesID;
-    private ArrayList<Client> _clients;
+    private ArrayList<Client> _clients = new ArrayList<Client>();
     protected String employeeName;
 
     public Employee(String name, long salesID) {
@@ -16,7 +16,7 @@ public abstract class Employee {
                 return false;
             }
         }
-        _clients.add(client);
+        this._clients.add(client);
         return true;
     }
 

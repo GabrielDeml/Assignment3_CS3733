@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class SalesManager extends Employee {
 
 
-    private ArrayList<Employee> employees;
+    private ArrayList<Employee> employees = new ArrayList<Employee>();
     protected SalesManager manager;
 
     public SalesManager(String name, long salesID) {
@@ -28,5 +28,9 @@ public class SalesManager extends Employee {
 
     double bonus() {
         return this.numberOfClients() * 10000;
+    }
+
+    public void addEmployee(Employee employee) {
+        this.employees.add(employee);
     }
 }

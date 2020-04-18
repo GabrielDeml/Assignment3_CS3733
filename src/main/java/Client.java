@@ -2,15 +2,12 @@ public class Client {
     private int _clientID;
     private String _clientName;
     private Employee _salesEmployee;
-    private static int _clientCount = 0;
 
     public Client(int clientID, String clientName, Employee salesEmployee) {
         this._clientID = clientID;
         this._clientName = clientName;
         this._salesEmployee = salesEmployee;
-        this._salesEmployee.addClient(this);
     }
-
 
     double totalSales() { return -1; }
 
@@ -36,9 +33,5 @@ public class Client {
 
     public void set_clientName(String _clientName) {
         this._clientName = _clientName;
-    }
-
-    public static int get_clientCount() {
-        return _clientCount;
     }
 }
