@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class SalesAssociate extends Employee {
 
 //    SalesAssociate(String) {
@@ -8,7 +10,7 @@ public class SalesAssociate extends Employee {
     protected SalesManager manager;
 
     double bonus() {
-        return _clients.size();
+        return this.numberOfClients() * 500;
     }
 
     public SalesManager getManager() {

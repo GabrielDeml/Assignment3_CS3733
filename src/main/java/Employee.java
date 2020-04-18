@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
 public abstract class Employee {
     protected long salesID;
@@ -8,7 +6,7 @@ public abstract class Employee {
 
     public Boolean addClient(String client) {
         for (int i = 0; i < _clients.size(); i++) {
-            if(_clients.get(i).get_clientName().equals(client)) {
+            if (_clients.get(i).get_clientName().equals(client)) {
                 return false;
             }
         }
@@ -26,5 +24,9 @@ public abstract class Employee {
 
     public void setSalesID(long salesID) {
         this.salesID = salesID;
+    }
+
+    protected int numberOfClients() {
+        return this._clients.size();
     }
 }

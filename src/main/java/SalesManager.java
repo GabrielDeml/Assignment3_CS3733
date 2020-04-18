@@ -29,5 +29,8 @@ public class SalesManager extends Employee {
     protected String employeeName;
     private ArrayList<Employee> employees;
     protected SalesManager manager;
-    double bonus(){return -1.0;}
+
+    double bonus() {
+        return this.numberOfClients() * 10000;
+    }
 }
