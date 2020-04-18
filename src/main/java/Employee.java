@@ -11,9 +11,11 @@ public abstract class Employee {
     }
 
     public Boolean addClient(Client client) {
-        for (int i = 0; i <_clients.size(); i++) {
-            if (_clients.get(i).equals(client)) {
-                return false;
+        if (_clients != null) {
+            for (int i = 0; i <_clients.size(); i++) {
+                if (_clients.get(i).equals(client)) {
+                    return false;
+                }
             }
         }
         this._clients.add(client);
