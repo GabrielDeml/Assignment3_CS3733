@@ -5,12 +5,13 @@ public abstract class Employee {
     private ArrayList<Client> _clients;
 
     public Boolean addClient(String client) {
-        for (int i = 0; i < _clients.size(); i++) {
+        for (int i = 0; i <_clients.size(); i++) {
             if (_clients.get(i).get_clientName().equals(client)) {
                 return false;
             }
         }
-        this._clients.add(new Client());
+        int clientCount = Client.get_clientCount();
+        _clients.add(new Client(clientCount+1, "name"+clientCount, this));
         return true;
     }
 

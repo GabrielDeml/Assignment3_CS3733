@@ -2,10 +2,6 @@ import java.util.ArrayList;
 
 public class SalesAssociate extends Employee {
 
-//    SalesAssociate(String) {
-//
-//    }
-
     protected String employeeName;
     protected SalesManager manager;
 

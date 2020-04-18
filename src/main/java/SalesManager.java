@@ -1,7 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class SalesManager extends Employee {
+
+    protected String employeeName;
+    private ArrayList<Employee> employees;
+    protected SalesManager manager;
+
     public String getEmployeeName() {
         return employeeName;
     }
@@ -25,10 +29,6 @@ public class SalesManager extends Employee {
     public void setManager(SalesManager manager) {
         this.manager = manager;
     }
-
-    protected String employeeName;
-    private ArrayList<Employee> employees;
-    protected SalesManager manager;
 
     double bonus() {
         return this.numberOfClients() * 10000;
