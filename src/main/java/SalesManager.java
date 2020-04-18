@@ -26,17 +26,8 @@ public class SalesManager extends Employee {
         this.manager = manager;
     }
 
-    public long getSalesID() {
-        return salesID;
-    }
-
-    public void setSalesID(long salesID) {
-        this.salesID = salesID;
-    }
-
     protected String employeeName;
     private ArrayList<Employee> employees;
     protected SalesManager manager;
-    protected long salesID;
     double bonus(){return -1.0;}
 }
