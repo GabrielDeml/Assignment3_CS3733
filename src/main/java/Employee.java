@@ -1,12 +1,8 @@
-import java.util.ArrayList;
+public abstract class Employee<Arraylist> {
+    public Boolean addClient(String client) {
+        return true;
+    }
+    private Arraylist<Client>(){
 
-public abstract class Employee {
-    protected long _salesID;
-     public Boolean addClient() {
-         return false;
-     }
-
-    private ArrayList<Client> getClients() {
-         return null;
     }
 }
