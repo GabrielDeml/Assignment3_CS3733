@@ -1,8 +1,15 @@
-public class SalesAssociate extends Employee{
+public class SalesAssociate extends Employee {
+
+//    SalesAssociate(String) {
+//
+//    }
+
     protected String employeeName;
     protected SalesManager manager;
 
-    double bonus() { return -1; }
+    double bonus() {
+        return _clients.size();
+    }
 
     public SalesManager getManager() {
         return manager;

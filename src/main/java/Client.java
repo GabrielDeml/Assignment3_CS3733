@@ -1,6 +1,23 @@
 public class Client {
     private int _clientID;
     private String _clientName;
+    private Employee _salesEmployee;
+
+    public static int getClientCount() {
+        return clientCount;
+    }
+
+    public static void setClientCount(int clientCount) {
+        Client.clientCount = clientCount;
+    }
+
+    private static int clientCount;
+
+    public Client(int clientID, String clientName, Employee salesEmployee) {
+        this._clientID = clientID;
+        this._clientName = clientName;
+        this._salesEmployee = salesEmployee;
+    }
 
     double totalSales() { return -1; }
 
