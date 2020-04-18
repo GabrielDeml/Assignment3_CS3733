@@ -5,11 +5,17 @@ public class main {
         SalesAssociate Sven = new SalesAssociate("Sven", 7, Charlie);
         SalesAssociate Alex = new SalesAssociate("Alex", 20, Sam);
         Client Jo = new Client(32, "Jo", Sam);
+        Sam.addClient(Jo);
         Client Riley = new Client(473, "Riley", Sam);
+        Sam.addClient(Riley);
         Client Peyton = new Client(555, "Peyton", Sven);
+        Sven.addClient(Peyton);
         Client Avery = new Client(654, "Avery", Charlie);
+        Charlie.addClient(Avery);
         Client Taylor = new Client(840, "Taylor", Alex);
+        Alex.addClient(Taylor);
         Client Remi = new Client(912, "Remi", Alex);
+        Alex.addClient(Remi);
 
 
         System.out.println("Sales Manager: " + Sam.getEmployeeName() + ". Employees: " + getEmployeesString(Sam) + "Clients: " + getClientsString(Sam));
